@@ -5,11 +5,18 @@ description = ""
 authors = ["Francisco <vieirafrancisco.dev@gmail.com>"]
 license = "MIT License"
 readme = "README.md"
-packages = [{include = "gg_log"}]
+packages = [{include = "app"}]
 
 [tool.poetry.dependencies]
 python = "^3.13"
+tortoise-orm = {extras = ["asyncpg"], version = "^0.25.1"}
+aerich = {git = "https://github.com/tortoise/aerich.git", rev = "main"}
+python-dotenv = "^1.1.1"
 
+[tool.aerich]
+tortoise_orm = "app.config.db_config.TORTOISE_ORM"
+location = "app/migrations"
+src_folder = "./app"
 
 [build-system]
 requires = ["poetry-core"]
