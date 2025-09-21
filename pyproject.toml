@@ -12,6 +12,12 @@ python = "^3.13"
 tortoise-orm = {extras = ["asyncpg"], version = "^0.25.1"}
 aerich = {git = "https://github.com/tortoise/aerich.git", rev = "main"}
 python-dotenv = "^1.1.1"
+pyjwt = "^2.10.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest-asyncio = "^1.2.0"
+pytest = "^8.4.2"
+pytest-cov = "^7.0.0"
 
 [tool.aerich]
 tortoise_orm = "app.config.db_config.TORTOISE_ORM"
