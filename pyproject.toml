@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "gg-log"
+version = "0.1.0"
+description = ""
+authors = ["Francisco <vieirafrancisco.dev@gmail.com>"]
+license = "MIT License"
+readme = "README.md"
+packages = [{include = "gg_log"}]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
