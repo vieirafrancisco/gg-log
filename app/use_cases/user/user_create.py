@@ -1,3 +1,4 @@
+"""User creation use case implementation."""
 from app.use_cases.base import UseCase
 from app.repositories.user import UserRepository
 from app.ports.cryptography import Cryptography
@@ -5,6 +6,9 @@ from app.schemas.user import UserCreateUseCaseInput, UserCreateUseCaseOutput, Us
 
 
 class UserCreateUseCase(UseCase[UserCreateUseCaseInput, UserCreateUseCaseOutput]):
+    """
+    User creation use case.
+    """
     def __init__(self, user_repository: UserRepository, crypthography_service: Cryptography):
         self.user_repository = user_repository
         self.crypthography_service = crypthography_service
