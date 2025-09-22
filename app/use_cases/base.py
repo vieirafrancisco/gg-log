@@ -2,10 +2,8 @@
 from typing import TypeVar
 from abc import ABC, abstractmethod
 
-from pydantic import BaseModel as PydanticBaseModel
-
-InputType = TypeVar('InputType', bound=PydanticBaseModel)  # pylint: disable=invalid-name
-OutputType = TypeVar('OutputType', bound=PydanticBaseModel)  # pylint: disable=invalid-name
+InputType = TypeVar('InputType')  # pylint: disable=invalid-name
+OutputType = TypeVar('OutputType')  # pylint: disable=invalid-name
 
 
 class UseCase[InputType, OutputType](ABC):  # pylint: disable=invalid-name

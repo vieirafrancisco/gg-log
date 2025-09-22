@@ -1,3 +1,4 @@
+"""Schemas for User-related operations."""
 from dataclasses import dataclass
 
 # Use Case Inputs/Outputs
